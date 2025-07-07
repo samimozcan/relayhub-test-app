@@ -1,0 +1,56 @@
+{
+  "transaction": {
+    "ioPartner": "VERA",
+    "ioDivision3": "SUB",
+    "ioReference": "4803/260220122042025_160905"
+  },
+  "declaration": [
+    {
+      "objectIdentification": {
+        "objectName": "4803/2602202_TEST_0020",
+        "objectAlias": "4803/260220122042025_160905",
+        "declarationType": "EZA-D",
+        "referenceNumberOverlay": "AA_EZA_DE_IM4000",
+        "username": "ANDREAS"
+      },
+      "headerData": {
+        "addressedCustomsOffice": "7701",
+        "declarantIsConsignee": true,
+        "representationRelationshipCode": 1,
+        "inputTaxDeduction": true,
+        "agentContact": {
+          "contactPersonName": "Andreas Luxbauer",
+          "contactPersonPhoneNumber": "555 55 55",
+          "contactPersonPosition": "Zolldeklarant/in",
+          "contactPersonEmail": "test@test.com"
+        },
+        "procedureCodeRequested": "40",
+        "departureCountry": "AT",
+        "destinationFederalState": "25",
+        "destinationCountry": "AT",
+        "transportMeansArrivalIdentity": "TEST22042025",
+        "transportMeansNationalityCode": "TR",
+        "previousAdministrativeReferenceType": "T1",
+        "previousAdministrativeReferenceNumber": "25TR060500001220M5",
+        "dv1CostAllocation": {
+          "costType": "test",
+          "costs": 10,
+          "currencyCode": "EUR"
+        }
+      },
+      "addresses": [
+        {
+          "addressType": "CN",
+          "participantEORI": "DE123456789",
+          "participantSubsidiaryNumber": 555,
+          "companyName": "TESTKUNDE",
+          "streetAndNumber": "Suben",
+          "district": "Suben",
+          "countryCode": "AT",
+          "postalCode": "4975",
+          "city": "SUBEN"
+        }
+      ]
+    }
+  ]
+}

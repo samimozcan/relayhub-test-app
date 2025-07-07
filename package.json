@@ -1,0 +1,30 @@
+{
+  "name": "relayhub-test-app",
+  "version": "1.0.0",
+  "description": "A Node.js TypeScript application that reads folders and logs their names",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "watch": "nodemon --exec \"ts-node src/index.ts\" --ext ts",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "filesystem",
+    "folders"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
