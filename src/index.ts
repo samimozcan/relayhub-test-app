@@ -4,9 +4,10 @@ import { additionalData } from "./additional-data";
 import { token } from "./token";
 import axios from "axios";
 
-let objectNameStartIndex = 80;
+let objectNameStartIndex = 100;
 const disableDeclaration = false; // Set to true to disable declaration processing
 const disableInvoice = true; // Set to true to disable invoice processing
+const foldername ="beyanname-07-07-2025-v2"
 
 /**
  * Parse args from command line arguments
@@ -84,7 +85,7 @@ async function requestToRelayhub(args: {
     };
 
     try {
-      console.log(`Start reference number: ${referansNo}`);
+      console.log(`Start reference number: ${requestObject.referenceNo}`);
 
       const response = await axios.post(
         "https://dev-relayhub.singlewindow.io/api/v1-0/job-orders/init",
@@ -263,7 +264,7 @@ async function readFoldersAndLog(directoryPath: string): Promise<void> {
 async function main(): Promise<void> {
   // Get the directory path from command line arguments or use current directory
   const targetDirectory =
-    process.argv[2] || "beyanname-07-07-2025-v2" || process.cwd();
+    process.argv[2] || foldername || process.cwd();
 
   console.log(`Reading folders from: ${targetDirectory}`);
   await readFoldersAndLog(targetDirectory);
