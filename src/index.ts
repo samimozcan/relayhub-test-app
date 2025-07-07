@@ -3,8 +3,9 @@ import * as path from "path";
 import { additionalData } from "./additional-data";
 import { token } from "./token";
 import axios from "axios";
+import { additionalDataV2 } from "./additional-data-v2";
 
-let objectNameStartIndex = 100;
+let objectNameStartIndex = 100; // sıra numarası başlangıcını buradan güncelle - alican
 const disableDeclaration = false; // Set to true to disable declaration processing
 const disableInvoice = true; // Set to true to disable invoice processing
 const foldername ="beyanname-07-07-2025-v2"
@@ -69,7 +70,7 @@ async function requestToRelayhub(args: {
     }
 
     const additionalAutoIncrement = incrementObjectName();
-    const additionalDataTmp = structuredClone(additionalData);
+    const additionalDataTmp = structuredClone(additionalDataV2); // additional data dokümanını buradan maple-alican
     additionalDataTmp.declaration.forEach((declaration) => {
       declaration.objectIdentification.objectName = `${declaration.objectIdentification.objectName}${additionalAutoIncrement}`;
     });
@@ -136,7 +137,7 @@ async function prepareRequestToRelayhub(
   const declaration = actualFiles.find(
     (file) =>
       file.name.toLowerCase().includes("beyanname") ||
-      file.name.toLowerCase().includes("declaration")
+      file.name.toLowerCase().includes("declaration") // cmr,atr eklemek için bu alanı kopyala - alican
   );
   const invoice = actualFiles.find(
     (file) =>
